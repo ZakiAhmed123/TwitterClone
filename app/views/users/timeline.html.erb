@@ -1,0 +1,47 @@
+<nav>
+  <strong><p><a><span class="glyphicon glyphicon-home" aria-hidden="true"></span>  Home
+</a><a><span class="glyphicon glyphicon-flash" aria-hidden="true"> </span>  Moments
+</a><a>  <span class="glyphicon glyphicon-fire" aria-hidden="true"> </span>  Notifications
+</a><a>  <span class="glyphicon glyphicon-envelope" aria-hidden="true"> </span>  Messages</p>
+</a></strong>
+<img src="http://cdn.flaticon.com/png/256/31060.png" alt="" />
+<span class="follow" style="border-radius:15px;"> <%= link_to "FollowPeople", index_path %> </span>
+
+  <span class="signout" style="border-radius:15px;"> <%= link_to "Sign Out", sign_out_path %> </span>
+</nav>
+<div class="body">
+  <div class="profile">
+<img src="https://animalhumanenm.org/wp-content/uploads/2014/11/CAT-300x100.jpg" alt="" />
+<div class="profilearea">
+  <%= image_tag attachment_url(@current_user, :photo, :fill, 70, 70, format: "jpg"), class:"pp" %>
+<div class="innertext"><strong> <p class="name"> <%= @current_user.name %></p></strong>
+<p class="username">@<%= @current_user.user_name %> <p>Following <%= @current_user.follow_count %> Followers <%= @current_user.followers_count %> </p></p></div>
+</div>
+</div>
+<div class="postwform">
+<div class="createposts">
+<%= form_for @post do |f| %>
+<%= f.text_area :text, as: :text, class:"newpost", placeholder:"Whats Happenin Lover(boy/girl)?", cols: "50", rows: "1" %>
+<%= f.submit "Bojack'em", class: "newpostsubmit" %>
+<%end %>
+</div>
+<div class='outerlist' >
+  <div class="poststimeline">
+<% @posts.each do |f| %>
+<div class="eachpost">
+<%= image_tag attachment_url(f.user, :photo, :fill, 60, 60, format: "jpg"), class:"bb" %>
+<div id="postlisthead">
+<p id="nameslist"><%= f.user.name%> @<%= f.user.user_name%>&#8226; <%= distance_of_time_in_words f.created_at, Time.now %> ago </p>
+<p><%= f.text %></p>
+</div>
+</div>
+
+<% end %>
+</div>
+
+<div class="horsebottom">
+<center><img src="http://cdn.flaticon.com/png/256/31060.png" alt="" /> </center>
+</div>
+</div>
+</div>
+</div>

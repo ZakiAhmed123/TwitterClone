@@ -1,0 +1,305 @@
+.profileimage {
+  width:75px;
+  height:75px;
+  border-radius: 5px;
+  border:2px solid white;
+}
+    nav {
+    display:flex;
+    justify-content: space-between;
+    height:47px;
+    color:#66757F;
+    margin:0px;
+    border-bottom: 2px solid #D0D3D4;
+    margin-bottom: 0px;
+    background-color: white;
+  }
+
+  nav img{
+    width:25px;
+    height:20px;
+    margin-top: 8px;
+    margin-right:20px;
+  }
+nav span {
+  font-size: 18px;
+  color:#66757F;
+}
+
+nav p {
+  display:flex;
+  justify-content: space-between;;
+  margin-top:8px;
+  width:440px;
+}
+nav a {
+color:#66757F;
+text-decoration: none;}
+
+.profile {
+  width:290px;
+  height: 190px;
+  display:flex;
+  flex-direction: column;
+  border:3px solid #EAEFF3;
+  border-radius: 10px;
+  position:relative;
+  margin-left: 40px;
+  background-color: white;
+}
+.innertext {
+  position:absolute;
+  left:98px;
+  top: 100px;
+}
+.profilearea {
+  display:flex;
+}
+.profileimage {
+  position:absolute;
+  top:70px;
+  left:10px;
+}
+body {
+  background-color: #F5F8FA;
+}
+.profile img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.innertext p{
+  margin-bottom: 0px;
+}
+
+p.name { font-size: 20px;}
+
+p.username {
+  color:#76758B;
+}
+
+.followimage {
+  width:50px;
+  height:50px;
+}
+
+.whotofollow {
+  width:295px;
+}
+.profilephoto {
+  width:215px;
+  height:215px;
+  border-radius: 20px;
+  border:4px solid white;
+}
+
+.showprofile {
+  width:220px;
+  height:320px;
+
+}
+
+#nameshow {
+  font-size:25px;
+  font-weight:bold;
+  margin:0px;
+}
+
+.signinpage {
+    width:100%;
+    max-width: 1280px;
+  height:670px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#join {
+  font-weight: lighter;
+  font-size: 60px;
+}
+
+.textfield {
+  font-size: 20px;
+}
+.signuplink {
+  font-size: 30px;
+  background-color: white;
+  border-radius: 10px;
+  border:2px solid black;
+}
+
+.attachment {
+  font-size: 20px;
+  background-color: white;
+  border-radius: 5px;
+  border:2px solid black;
+}
+
+.attachmentfield {
+  margin-bottom: 10px;
+}
+
+.pp {
+  border-radius: 5px;
+  border:2px solid white;
+  position:absolute;
+  top:40px;
+  left: 10px;
+}
+
+.list {
+width: 300px;
+height: 300px;
+background-color: #009999;
+border-radius: 5px;
+border:4px solid #D0D3D4;
+margin:10px;
+}
+.outerlist {
+  display:flex;
+  flex-wrap: wrap;
+  width:590px;
+  height:100%;
+}
+
+.showphoto {
+  border-radius: 10px;
+  border:4px solid white;
+
+}
+
+.block {
+  width:100%;
+  max-width: 1280px;
+  height:200px;
+  background-color: #009999;
+  position:absolute;
+}
+
+.info {
+  position:relative;
+  top:80px;
+  left:60px;
+}
+
+.body {
+  display:flex;
+}
+.postwform {
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  max-width:770px;
+}
+
+.bb {
+  border-radius: 5px;
+}
+
+#postlisthead {
+  display:flex;
+  flex-direction: column;
+}
+
+.poststimeline {
+  display:flex;
+  background-color: white;
+  width: 590px;
+  height:70px;
+  border-radius: 5px;
+  margin-left:10px;
+  border-top: 2px solid #EAEFF3;
+  border-left: 2px solid #EAEFF3;
+  border-right: 2px solid #EAEFF3;
+}
+
+
+#nameslist {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.horsebottom {
+  background-color: white;
+  width:590px;
+  height:30px;
+  border-radius: 5px;
+  margin-left:17px;
+  border:2px solid #EAEFF3;
+
+}
+.horsebottom img{
+  width:25px;
+  height: 25px;
+  display:flex;
+}
+
+.bb {
+  margin:3px;
+}
+
+.createposts {
+  height:80px;
+  width:590px;
+  background-color: #E9F1F8;
+  margin-left:10px;
+  border-radius: 5px;
+  border:2px solid white;
+  display:flex;
+}
+
+.newpost {
+  font-size: 17px;
+  line-height: 40px;
+  margin-top:5px;
+  border-radius: 5px;
+}
+
+.newpostsubmit {
+  width:105px;
+  height:30px;
+  background-color: white;
+  border-radius: 3px;
+  border:2px solid #009999;
+  color:black;
+}
+
+#indexphoto img {
+  width:200px;
+  height:200px;
+  border-radius:10px;
+  border:2px solid white;
+  margin-top:30px;
+}
+#indexphoto img:hover {
+  filter: sepia(100%)
+}
+
+#indexname {
+  font-size:20px;
+  font-weight: bold;
+}
+.eachpost {
+  display:flex;
+  width:590px;
+  border-bottom:2px solid #E9F1F8;
+}
+.poststimeline {
+  display:flex;
+  flex-direction: column;
+  width:590px;
+  height:100%;
+}
+
+.outershelllist {
+  display: flex;
+}
+
+.outershellshow {
+  display:flex;
+}
+
+.posts {
+  margin-left: 200px;
+}
