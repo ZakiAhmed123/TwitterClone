@@ -43,8 +43,7 @@
   background-color: #009999;
   width: 100%;
   max-width:1280px;
-  height :250px;
-  position:relative;
+  height :100px;
 }
 
 #logo {
@@ -61,11 +60,12 @@
 }
 
 #welcome {
-  color:white;
-  width:700px;;
-  height:250px;
+  color:#009999;
+  width:100%;
+  max-width: 1280px;
+  height:200px;
   font-weight: lighter;
-  font-size: 30px;
+  font-size: 80px;
   align-self: center;
 }
 
