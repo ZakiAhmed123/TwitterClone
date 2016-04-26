@@ -13,8 +13,10 @@ Rails.application.routes.draw do
   get 'users/index/:id' => 'users#show', as: :user
   get 'users/index' => 'users#index', as: :index
 
-  post 'users/index/:id/follow' => 'following#create', as: :follow
-  post 'users/index/:id/unfollow' => 'following#delete', as: :unfollow
+  get 'users/index/:id/follow' => 'following#create', as: :follow
+  patch 'users/index/:id/follow' => 'following#create'
+  get 'users/index/:id/unfollow' => 'following#delete', as: :unfollow
+  patch 'users/index/:id/unfollow' => 'following#delete'
 
   get 'users/:id/timeline' => 'users#timeline', as: :posts
   post 'users/:id/timeline' => 'users#create_post'

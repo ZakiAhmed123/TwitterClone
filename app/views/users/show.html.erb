@@ -11,18 +11,28 @@
   <span class="signout" style="border-radius:15px;"> <%= link_to "Sign Out", sign_out_path %> </span>
 </nav>
 
-<div class="showprofile">
-  <div class="block"></div>
-  <div class="posts">
-    <% @user_profile.posts.each do |f| %>
-    <%= f.text %>
-    <%end %>
-  </div>
+<div class="block"></div>
+<div class="profilecontainer">
 <div class="info">
 <%= image_tag attachment_url(@user_profile, :photo, :fill, 210, 210, format: "jpg"), class:"showphoto" %>
 <p id="nameshow"><%= @user_profile.name %></p>
 <p id="usernameshow">@<%= @user_profile.user_name %></p>
-<%= link_to "Hate Me!", unfollow_path(id: @user_profile.id), class: "btn btn-default", method: :post%>
-<%= link_to "Love Me!", follow_path(id: @user_profile.id), class: "btn btn-default", method: :post%>
+<% if @current_user && @current_user.following?(@user_profile)%>
+<div class="followbtn"><em><%= link_to "Following", unfollow_path(id: @user_profile.id)%></em></div>
+<% elsif @current_user %>
+<div class="followbtn"><em><center><%= link_to "Follow", follow_path(id: @user_profile.id)%></center></em></div>
+<% end %>
+</div>
+<div class="posts">
+  <p class="thoughts"> THOUGHTS </p>
+  <% @user_profile.posts.each do |f| %>
+  <div class="text1">
+  <%= image_tag attachment_url(f.user, :photo, :fill, 60, 60, format: "jpg"), class:"bb" %>
+  <div class="text2">
+  <p><%= f.user.name %> @<%= f.user.user_name %></p>
+  <p><%= f.text %>-<%= distance_of_time_in_words f.created_at, Time.now %> ago</p>
+</div>
+</div>
+  <%end %>
 </div>
 </div>
