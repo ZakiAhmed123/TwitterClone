@@ -21,18 +21,26 @@
 <div class="postwform">
 <div class="createposts">
 <%= form_for @post do |f| %>
-<%= f.text_area :text, as: :text, class:"newpost", placeholder:"Whats Happenin Lover(boy/girl)?", cols: "50", rows: "1" %>
-<%= f.submit "Bojack'em", class: "newpostsubmit" %>
+<%= f.text_area :text, as: :text, class:"newpost", placeholder:"BE YOURSELF!", cols: "50", rows: "1" %>
+<%= f.submit "TELL THE WORLD!", class: "newpostsubmit" %>
 <%end %>
 </div>
 <div class='outerlist' >
   <div class="poststimeline">
 <% @posts.each do |f| %>
 <div class="eachpost">
-<%= image_tag attachment_url(f.user, :photo, :fill, 60, 60, format: "jpg"), class:"bb" %>
+  <%= link_to user_path(id: f.user), class:"user" do %><%= image_tag attachment_url(f.user, :photo, :fill, 60, 60, format: "jpg"), class:"bb" %><%end%>
 <div id="postlisthead">
 <p id="nameslist"><%= f.user.name%> @<%= f.user.user_name%>&#8226; <%= distance_of_time_in_words f.created_at, Time.now %> ago </p>
 <p><%= f.text %></p>
+<div class="voting">
+<%= link_to upvote_post_path(id: f.user), method: :post, class: 'upvote' do %>
+<i class="fa fa-heart-o"></i>
+</i><%end %>
+<%=f.view_count%>
+<%= link_to downvote_post_path(id: f.user), method: :post, class: 'upvote' do %>
+<i class="fa fa-frown-o"></i><%end%>
+</div>
 </div>
 </div>
 

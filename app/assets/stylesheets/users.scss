@@ -257,7 +257,7 @@ margin:10px;
 }
 
 .newpostsubmit {
-  width:105px;
+  width:135px;
   height:30px;
   background-color: white;
   border-radius: 3px;
@@ -302,4 +302,12 @@ margin:10px;
 
 .posts {
   margin-left: 200px;
+}
+
+.voting {
+  display:flex;
+}
+
+.voting i{
+  margin:0 3px 0 3px;
 }

@@ -18,6 +18,9 @@ Rails.application.routes.draw do
 
   get 'users/:id/timeline' => 'users#timeline', as: :posts
   post 'users/:id/timeline' => 'users#create_post'
+
+  post 'users/:id/timeline' => 'users#upvotes', as: :upvote_post
+  post 'users/:id/timeline' => 'users#downvotes', as: :downvote_post
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
