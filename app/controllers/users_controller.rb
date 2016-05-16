@@ -52,17 +52,6 @@ def create_post
   end
 end
 
-def upvotes
-  @post = Post.find params[:user_id]
-    @post.update view_count: (@post.view_count + 1)
-    redirect_to timeline_path
-end
-
-def downvotes
-  @post = Post.find params[:user_id]
-    @post.update view_count: (@post.view_count - 1)
-    redirect_to timeline_path
-  end
 
 
 end
