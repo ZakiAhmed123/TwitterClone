@@ -1,5 +1,5 @@
 # TwitterClone
-My own versio of a clone of twitter complete with following liking etc.
+My own version of a clone of twitter complete with following liking etc.
 #My name is Zaki Ahmed,
 & I am a ruby on rails engineer, 24 years old out of Houston TX looking to grow as a developer.
 
