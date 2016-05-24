@@ -1,11 +1,20 @@
 <div class="homepage-title">
   <div id="nav">
-  <img src="http://cdn.flaticon.com/png/256/31060.png" alt="" />
+    <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
 <p style="margin=0px;">
 <%= link_to sign_in_path, class:"login" do %><button id="signin"> Sign In</button> <% end %>
 <%= link_to sign_up_path, class:"login" do %><button id="signup"> Sign Up</button><% end %>
   </div>
 </p>
-  <p class="homepage-p1">Welcome to Bojack</p>
+  <p class="homepage-p1">Welcome to Twitter</p>
   <p class="homepage-p2">Find community, conversation and inspiration about the things you love.</p>
+  <div class="photo-flex">
+    <%= image_tag 'p1.jpg' %>
+    <%= image_tag 'p2.jpg' %>
+    <%= image_tag 'p3.jpg' %>
+    <%= image_tag 'p4.jpg' %>
+    <%= image_tag 'p5.jpg' %>
+    <%= image_tag 'p6.jpg' %>
+
+  </div>
 </div>

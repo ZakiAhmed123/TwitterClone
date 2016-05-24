@@ -1,9 +1,9 @@
 <nav id="navsignup">
-  <img src="http://cdn.flaticon.com/png/256/31060.png" alt="" />
-  <%= link_to 'Sign In', sign_in_path %>
+  <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+  <%= link_to 'Sign In', sign_in_path, class:"newsigninlink" %>
 </nav>
 
-  <div class="signoutpage">
+  <div class="new-signout">
     <% if @user.errors.any? %>
       <%= pluralize(@user.errors.count, 'error') %> prevented your form from success.
       <ul class="mdl-list">
@@ -12,32 +12,28 @@
         <% end %>
       </ul>
     <% end %>
-      <h1 id="join">Join Bojack Today.</h1>
+      <h1 id="join">Join Twitter Today.</h1>
       <%= form_for @user do |f| %>
       <div class="">
-        <%= f.label :name %>
-        <%= f.text_field :name, placeholder:"Name", class:"textfield" %>
+        <%= f.text_field :name, placeholder:"Full Name", class:"textfield", size:30 %>
       </div>
       <div class="">
-        <%= f.label :user_name %>
-        <%= f.text_field :user_name,placeholder:"User Name", class:"textfield" %>
+        <%= f.text_field :user_name,placeholder:"User Name", class:"textfield", size:30 %>
       </div>
       <div class="">
-        <%= f.label :email %>
-        <%= f.text_field :email, placeholder:"email", class:"textfield"%>
+        <%= f.text_field :email, placeholder:"Email", class:"textfield", size:30%>
       </div>
        <div class="">
-          <%= f.label :password %>
-          <%= f.password_field :password, placeholder:"Password", class:"textfield" %>
-        </div>
-
-        <div class="attachmentfield">
-          <%= f.label :photo %>
-          <%= f.attachment_field :photo, class:"attachment" %>
+          <%= f.password_field :password, placeholder:"Password", class:"textfield", size:30 %>
         </div>
 
         <div>
-        <%= f.submit "Sign Up", class: "signuplink" %>
+          <%= f.attachment_field :photo %>
+        </div>
+
+        <div>
+        <%= f.submit "Sign Up", class:"newsignup" %>
           <% end %>
         </div>
+
       </div>

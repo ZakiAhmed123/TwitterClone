@@ -4,7 +4,7 @@
 </a><a>  <span class="glyphicon glyphicon-fire" aria-hidden="true"> </span>  Notifications
 </a><a>  <span class="glyphicon glyphicon-envelope" aria-hidden="true"> </span>  Messages</p>
 </a></strong>
-<img src="http://cdn.flaticon.com/png/256/31060.png" alt="" />
+<i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
 <span class="follow" style="border-radius:15px;"> <%= link_to "Follow People", index_path %> </span>
 
   <span class="signout" style="border-radius:15px;"> <%= link_to "Sign Out", sign_out_path %> </span>
@@ -21,8 +21,8 @@
 <div class="postwform">
 <div class="createposts">
 <%= form_for @post do |f| %>
-<%= f.text_area :text, as: :text, class:"newpost", placeholder:"BE YOURSELF!", cols: "50", rows: "1" %>
-<%= f.submit "TELL THE WORLD!", class: "newpostsubmit" %>
+<%= f.text_area :text, as: :text, class:"newpost", placeholder:"Whats on your Mind?", cols: "50", rows: "1" %>
+<%= f.submit "Tweet!", class: "newpostsubmit" %>
 <%end %>
 </div>
 <div class='outerlist' >

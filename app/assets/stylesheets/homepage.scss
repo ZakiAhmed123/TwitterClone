@@ -5,6 +5,10 @@ justify-content: space-between;
 margin:10px 10px 0 0;
 }
 
+
+#nav i {
+  color:white;
+}
 #signup {
   background-color: white;
   border:1px solid white;
@@ -41,7 +45,7 @@ margin:10px 10px 0 0;
   height:100vh;
   display:flex;
   flex-direction: column;
-font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding-top: 10px;
 }
 
@@ -64,6 +68,17 @@ font-family: 'Roboto', sans-serif;
   margin-left: 10px;
 }
 
+.photo-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photo-flex img {
+  width:25%;
+  height:45%;
+  border-radius: 5px;
+}
 
 @media screen and (max-width:415px) {
   .homepage-p1{
